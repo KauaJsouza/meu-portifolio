@@ -1,0 +1,208 @@
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão para o corpo do texto */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre itens */
+    align-items: center; /* Alinha itens verticalmente */
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #52dbd6, #fd7900); /* Gradiente de verde-azulado para laranja */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+header .logo img {
+    width: 120px; /* Tamanho ajustado da logo */
+    border-radius: 8px; /* Bordas arredondadas na logo */
+    transition: transform 0.3s ease-in-out; /* Transição suave para efeito de hover */
+}
+
+header .logo img:hover {
+    transform: scale(1.1); /* Aumenta a logo ao passar o mouse */
+}
+
+nav.menu {
+    display: flex;
+    flex-grow: 1; /* Faz o menu ocupar o espaço restante disponível */
+    justify-content: right; /* Alinha o menu à direita */
+}
+
+nav.menu ul {
+    list-style: none; /* Remove marcadores de lista */
+    display: flex;
+    gap: 30px; /* Espaçamento entre itens do menu */
+    padding: 0;
+    margin: 0;
+}
+
+nav.menu ul li {
+    margin: 0; /* Remove margens dos itens da lista */
+}
+
+nav.menu ul li a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Bordas arredondadas nos links */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para o efeito de hover */
+}
+
+nav.menu ul li a:hover {
+    background-color: #ff5500; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos da Seção Principal */
+main {
+    padding: 40px 15px; /* Espaçamento interno da seção */
+    text-align: center; /* Centraliza o texto */
+    background: linear-gradient(135deg, #ff5500, #00d5ff); /* Gradiente de laranja para azul claro */
+    color: white; /* Cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.fotokaua {
+    width: 120px; /* Tamanho da foto */
+    border-radius: 50%; /* Forma circular para a foto */
+    margin-bottom: 20px; /* Espaçamento abaixo da foto */
+    border: 4px solid #f39c12; /* Borda ao redor da foto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    transition: transform 0.3s ease-in-out; /* Transição suave para efeito de hover */
+}
+
+.fotokaua:hover {
+    transform: scale(1.1); /* Aumenta a foto ao passar o mouse */
+}
+
+.pontos-kaua {
+    margin: 20px 0; /* Espaçamento acima e abaixo dos pontos */
+}
+
+.pontos-kaua h4 {
+    color: #fff; /* Cor do texto dos títulos */
+    margin-bottom: 10px; /* Espaçamento abaixo dos títulos */
+    font-size: 1.2rem; /* Tamanho da fonte dos títulos */
+}
+
+.pontos-kaua p {
+    margin: 5px 0; /* Espaçamento acima e abaixo dos parágrafos */
+    font-size: 1rem; /* Tamanho da fonte dos parágrafos */
+    background: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno dos parágrafos */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background 0.3s, color 0.3s; /* Transição suave para o efeito de hover */
+}
+
+.pontos-kaua p:hover {
+    background: rgba(255, 255, 255, 0.4); /* Muda o fundo ao passar o mouse */
+    color: #3197c7; /* Muda a cor do texto ao passar o mouse */
+}
+
+.habilidades {
+    margin-top: 30px; /* Espaçamento acima da lista de habilidades */
+    display: inline-block; /* Permite ajustar a largura do bloco */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.habilidades li {
+    margin-bottom: 10px; /* Espaçamento abaixo dos itens */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 10px; /* Espaçamento interno dos itens */
+    border-radius: 8px; /* Bordas arredondadas nos itens */
+    list-style: none; /* Remove marcadores de lista */
+    font-size: 1rem; /* Tamanho da fonte dos itens */
+}
+
+.habilidade-foto {
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 500px; /* Limita a largura máxima */
+    margin-top: 30px; /* Espaçamento acima da foto */
+    margin-bottom: 50px; /* Espaçamento abaixo da foto */
+    border-radius: 10px; /* Bordas arredondadas na foto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #282c34; /* Cor de fundo escura */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px 10px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para separar do conteúdo */
+}
+
+footer .icones {
+    margin-bottom: 10px; /* Espaçamento abaixo dos ícones */
+}
+
+footer .icones a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    transition: transform 0.3s ease-in-out; /* Transição suave para efeito de hover */
+}
+
+footer .icones img {
+    width: 30px; /* Tamanho dos ícones */
+}
+
+footer .icones a:hover img {
+    transform: scale(1.2) rotate(10deg); /* Aumenta e rotaciona os ícones ao passar o mouse */
+}
+
+/* Consultas de Mídia para Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px; /* Ajusta o padding do cabeçalho em telas menores */
+    }
+
+    nav.menu ul {
+        flex-direction: column; /* Alinha o menu verticalmente */
+        gap: 10px; /* Espaçamento entre itens do menu */
+        margin-top: 10px; /* Espaçamento acima do menu */
+    }
+
+    .fotokaua {
+        width: 100px; /* Reduz o tamanho da foto em telas menores */
+    }
+
+    main {
+        padding: 30px 10px; /* Ajusta o padding da seção principal */
+    }
+
+    footer {
+        padding: 15px 10px; /* Ajusta o padding do rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        width: 100px; /* Reduz ainda mais o tamanho da logo em telas pequenas */
+    }
+
+    .fotokaua {
+        width: 80px; /* Reduz o tamanho da foto em telas muito pequenas */
+    }
+
+    .habilidades {
+        text-align: center; /* Centraliza a lista de habilidades em telas pequenas */
+    }
+
+    .habilidades li {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos itens em telas pequenas */
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização em dispositivos móveis -->
+    <title>Portfólio Pessoal - Projetos</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="../CSS/portfolio.css"> <!-- Link para o arquivo CSS específico para a página de projetos -->
+    <link rel="shortcut icon" type="image/x-icon" href="../Imagens/Logo Niervin.png"> <!-- Ícone da aba do navegador -->
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <header>
+        <div class="logo">
+            <img src="../Imagens/fox-svgrepo-com.svg" alt="Logo raposa"> <!-- Logo da página -->
+        </div>
+        <nav class="menu">
+            <ul>
+                <!-- Links de navegação para outras páginas do site -->
+                <li><a href="../index.html">Home</a></li> <!-- Link para a página inicial -->
+                <li><a href="./portfolio.html">Projetos</a></li> <!-- Link para a página de Projetos -->
+                <li><a href="./about.html">Sobre Mim</a></li> <!-- Link para a página Sobre Mim -->
+                <li><a href="./contato.html">Contato</a></li> <!-- Link para a página de Contato -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página de projetos -->
+    <main id="projetos">
+        <h1>Meus Projetos</h1> <!-- Título principal da seção de projetos -->
+        <div class="projetos-galeria">
+            <!-- Item da galeria para o projeto Fazenda Inteligente -->
+            <div class="projeto-item">
+                <!-- Label que ativa o modal quando clicado -->
+                <label for="modal-fazenda">
+                    <!-- Miniatura do projeto -->
+                    <img src="../Imagens/FAZENDA INTELIGENTE.png" alt="Fazenda Inteligente" class="projeto-thumb">
+                </label>
+                <h3>Fazenda Inteligente</h3> <!-- Título do projeto -->
+            </div>
+
+            <!-- Checkbox oculto para controlar o modal -->
+            <input type="checkbox" id="modal-fazenda" class="modal-checkbox">
+
+            <!-- Modal com detalhes do projeto Fazenda Inteligente -->
+            <div class="modal" id="modal-fazenda-content">
+                <div class="modal-content">
+                    <!-- Botão para fechar o modal -->
+                    <label for="modal-fazenda" class="close">&times;</label>
+                    <h3>Fazenda Inteligente</h3> <!-- Título do projeto no modal -->
+                    <!-- Descrição detalhada do projeto -->
+                    <p>Nesse projeto junto com 4 desenvolvedores, desenvolvemos um site conectando uma placa ESP32, que permite ligar e desligar as luzes de diferentes áreas de uma fazenda, como o pasto e a casa, tudo via Wi-Fi, tornando o gerenciamento das luzes mais prático e eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="icones">
+            <!-- Links de redes sociais -->
+            <a href="https://www.instagram.com/souzas_kaua/" target="_blank"><img src="../Imagens/logoInsta.svg" alt="Instagram"></a> <!-- Link para o Instagram -->
+            <a href="https://github.com/KauaJsouza" target="_blank"><img src="../Imagens/logogit.svg" alt="GitHub"></a> <!-- Link para o GitHub -->
+        </div>
+        <p>© 2024 Kauã. Todos os direitos reservados.</p> <!-- Nota de direitos autorais -->
+    </footer>
+</body>
+</html>

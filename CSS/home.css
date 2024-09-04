@@ -1,0 +1,168 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total dos elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão para o corpo do texto */
+    line-height: 1.6; /* Define a altura da linha para facilitar a leitura */
+    background-color: #f0f0f0; /* Define a cor de fundo do corpo */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex; /* Utiliza flexbox para organizar os itens do cabeçalho */
+    justify-content: space-between; /* Distribui o espaço entre os itens do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 20px 40px; /* Define o preenchimento interno do cabeçalho */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradiente de roxo para azul */
+    color: white; /* Define a cor do texto no cabeçalho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao cabeçalho */
+}
+
+.menu ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Utiliza flexbox para o menu */
+    gap: 30px; /* Define o espaço entre os itens do menu */
+}
+
+.menu ul li a {
+    color: white; /* Define a cor do texto dos links do menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Define o texto em negrito */
+    padding: 10px 20px; /* Define o preenchimento interno dos links */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    transition: background-color 0.3s, color 0.3s; /* Define a transição suave para as mudanças de cor */
+}
+
+.menu ul li a:hover {
+    background-color: #ff5500; /* Tom de laranja vibrante ao passar o mouse */
+    color: #fff; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Estilos da Seção Principal */
+main {
+    background: linear-gradient(to right, #ff5500, #00d5ff); /* Gradiente de laranja para rosa */
+    padding: 150px 50px; /* Define o preenchimento interno da seção principal */
+    text-align: center; /* Centraliza o texto dentro da seção principal */
+    color: white; /* Define a cor do texto na seção principal */
+}
+
+.intro img {
+    width: 120px; /* Define a largura das imagens */
+    border-radius: 50%; /* Torna as imagens circulares */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil às imagens */
+    margin-bottom: 20px; /* Define o espaço abaixo das imagens */
+    transition: transform 0.3s; /* Define a transição suave para a transformação */
+}
+
+.intro img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.cta-buttons {
+    margin-top: 30px; /* Define o espaço acima dos botões de chamada para ação */
+}
+
+.btn {
+    display: inline-block; /* Define que o botão deve ser exibido como bloco em linha */
+    padding: 15px 30px; /* Define o preenchimento interno dos botões */
+    margin: 10px; /* Define o espaço ao redor dos botões */
+    background-color: #008080; /* Tom de verde-azulado para o fundo dos botões */
+    color: white; /* Define a cor do texto dos botões */
+    text-decoration: none; /* Remove o sublinhado dos botões */
+    border-radius: 30px; /* Adiciona bordas arredondadas aos botões */
+    transition: background-color 0.3s, transform 0.3s; /* Define a transição suave para as mudanças de cor e transformação */
+}
+
+.btn:hover {
+    background-color: #20b2aa; /* Tom de azul piscina claro ao passar o mouse */
+    transform: translateY(-5px); /* Move o botão para cima ao passar o mouse */
+}
+
+/* Estilos do Rodapé */
+footer {
+    position: fixed; /* Fixa o rodapé na parte inferior da página */
+    bottom: 0; /* Define a posição do rodapé na parte inferior */
+    width: 100%; /* Define a largura do rodapé para 100% da tela */
+    background-color: #282c34; /* Define a cor de fundo do rodapé */
+    color: white; /* Define a cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 20px 0; /* Define o preenchimento interno do rodapé */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil ao rodapé */
+}
+
+footer .icones img {
+    width: 30px; /* Define a largura das imagens de ícones */
+    margin: 0 15px; /* Define o espaço ao redor das imagens de ícones */
+    transition: transform 0.5s; /* Define a transição suave para a transformação */
+}
+
+footer .icones img:hover {
+    transform: scale(1.2) rotate(10deg); /* Aumenta o tamanho e rotaciona os ícones ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinha os itens do cabeçalho verticalmente em telas menores */
+        align-items: flex-start; /* Alinha os itens do cabeçalho à esquerda */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Alinha os itens do menu verticalmente em telas menores */
+        gap: 10px; /* Reduz o espaço entre os itens do menu */
+        margin-top: 10px; /* Define o espaço acima do menu */
+    }
+
+    .menu ul li {
+        margin-left: 0; /* Remove a margem esquerda dos itens do menu */
+    }
+
+    .menu ul li a {
+        padding: 10px; /* Reduz o preenchimento interno dos links do menu */
+        font-size: 16px; /* Reduz o tamanho da fonte dos links do menu */
+    }
+
+    main {
+        padding: 80px 20px; /* Reduz o preenchimento interno da seção principal */
+    }
+
+    .intro img {
+        width: 100px; /* Reduz a largura das imagens em telas menores */
+    }
+
+    .btn {
+        padding: 12px 24px; /* Reduz o preenchimento interno dos botões em telas menores */
+    }
+
+    footer {
+        padding: 15px 10px; /* Reduz o preenchimento interno do rodapé */
+    }
+
+    footer .icones img {
+        width: 25px; /* Reduz a largura das imagens de ícones em telas menores */
+        margin: 0 10px; /* Reduz o espaço ao redor das imagens de ícones */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        gap: 5px; /* Reduz ainda mais o espaço entre os itens do menu */
+    }
+
+    .menu ul li a {
+        font-size: 14px; /* Reduz o tamanho da fonte dos links do menu */
+    }
+
+    .intro img {
+        width: 80px; /* Reduz ainda mais a largura das imagens em telas muito pequenas */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Reduz o preenchimento interno dos botões em telas muito pequenas */
+    }
+}

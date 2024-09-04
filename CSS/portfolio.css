@@ -1,0 +1,235 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui o padding e border no cálculo da largura e altura dos elementos */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão da página */
+    line-height: 1.6; /* Aumenta a altura da linha para melhorar a legibilidade */
+    background-color: #f0f0f0; /* Define a cor de fundo da página */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os elementos do cabeçalho */
+    align-items: center; /* Alinha verticalmente os itens do cabeçalho */
+    padding: 20px 40px; /* Adiciona espaço interno ao cabeçalho */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradiente de roxo para azul */
+    color: white; /* Define a cor do texto no cabeçalho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+/* Estilos do Menu de Navegação */
+.menu ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Exibe os itens da lista em linha */
+    gap: 30px; /* Espaço entre os itens do menu */
+}
+
+.menu ul li a {
+    color: white; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    padding: 10px 20px; /* Adiciona espaço interno aos links */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de cor */
+}
+
+.menu ul li a:hover {
+    background-color: #ff5500; /* Tom de laranja vibrante quando o link é hover */
+    color: #fff; /* Cor do texto quando o link é hover */
+}
+
+/* Estilos da Seção Principal */
+main {
+    padding: 60px 20px; /* Adiciona espaço interno à seção principal */
+    text-align: center; /* Centraliza o texto */
+    background: linear-gradient(135deg, #ff5500, #00d5ff); /* Gradiente de laranja para rosa */
+    color: rgb(0, 0, 0); /* Define a cor do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à seção principal */
+}
+
+.projetos-galeria {
+    display: grid; /* Exibe os itens em um layout de grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+    gap: 40px; /* Espaço entre os itens da galeria */
+    margin-top: 40px; /* Adiciona espaço acima da galeria */
+}
+
+.projeto-item {
+    background-color: rgb(255, 255, 255); /* Define a cor de fundo dos itens do projeto */
+    padding: 30px; /* Adiciona espaço interno aos itens do projeto */
+    border-radius: 20px; /* Adiciona bordas arredondadas aos itens do projeto */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos itens do projeto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transição suave para mudanças de transformação e sombra */
+}
+
+.projeto-item:hover {
+    transform: translateY(-10px); /* Levanta o item do projeto quando hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Aumenta a sombra do item quando hover */
+}
+
+.projeto-thumb {
+    max-width: 60%; /* Ajusta o tamanho máximo da imagem do projeto */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da imagem */
+}
+
+/* Estilos para Modais */
+.modal-checkbox {
+    display: none; /* Oculta o checkbox usado para controlar o modal */
+}
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 10; /* Coloca o modal acima dos outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o modal */
+    justify-content: center; /* Centraliza o conteúdo do modal horizontalmente */
+    align-items: center; /* Centraliza o conteúdo do modal verticalmente */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade do modal */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Cor de fundo do conteúdo do modal */
+    margin: auto; /* Centraliza o modal na tela */
+    padding: 40px; /* Adiciona espaço interno ao conteúdo do modal */
+    border-radius: 10px; /* Adiciona bordas arredondadas ao conteúdo do modal */
+    width: 90%; /* Define a largura do conteúdo do modal */
+    max-width: 600px; /* Define a largura máxima do conteúdo do modal */
+    position: relative; /* Permite posicionamento relativo para o botão de fechar */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao conteúdo do modal */
+}
+
+.close {
+    position: absolute; /* Posiciona o botão de fechar no canto superior direito do modal */
+    top: 10px;
+    right: 20px;
+    font-size: 28px; /* Tamanho da fonte do botão de fechar */
+    color: #333; /* Cor do botão de fechar */
+    cursor: pointer; /* Muda o cursor para pointer quando sobre o botão */
+    transition: color 0.3s; /* Transição suave para a cor do botão de fechar */
+}
+
+.close:hover,
+.close:focus {
+    color: #000; /* Muda a cor do botão de fechar quando hover ou foco */
+}
+
+/* Exibir modal se o checkbox estiver marcado */
+#modal-fazenda:checked ~ #modal-fazenda-content,
+#modal-tcc:checked ~ #modal-tcc-content {
+    display: flex; /* Exibe o modal */
+    opacity: 1; /* Define a opacidade para totalmente visível */
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #282c34; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 30px 0; /* Adiciona espaço interno ao rodapé */
+    margin-top: 40px; /* Adiciona espaço acima do rodapé */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao rodapé */
+}
+
+footer .icones img {
+    width: 30px; /* Define a largura dos ícones de redes sociais */
+    margin: 0 15px; /* Adiciona espaço horizontal entre os ícones */
+    transition: transform 0.5s; /* Transição suave para a transformação dos ícones */
+}
+
+footer .icones img:hover {
+    transform: scale(1.2) rotate(10deg); /* Aumenta e rotaciona os ícones quando hover */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column; /* Empilha o logo e o menu verticalmente */
+        align-items: flex-start; /* Alinha o conteúdo do cabeçalho ao início */
+        padding: 20px; /* Reduz o padding do cabeçalho */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Empilha os itens do menu verticalmente */
+        gap: 10px; /* Reduz o espaço entre os itens do menu */
+        margin-top: 10px; /* Adiciona espaço acima do menu */
+    }
+
+    .menu ul li {
+        margin-left: 0; /* Remove a margem esquerda dos itens do menu */
+    }
+
+    .menu ul li a {
+        padding: 10px; /* Ajusta o padding dos links do menu */
+        font-size: 16px; /* Reduz o tamanho da fonte dos links do menu */
+    }
+
+    main {
+        padding: 60px 20px; /* Ajusta o padding da seção principal */
+    }
+}
+
+@media (max-width: 768px) {
+    .projetos-galeria {
+        gap: 20px; /* Reduz o espaço entre os itens da galeria */
+    }
+
+    .projeto-item {
+        padding: 20px; /* Reduz o padding dos itens do projeto */
+    }
+
+    .projeto-thumb {
+        border-radius: 5px; /* Reduz o arredondamento das bordas das imagens do projeto */
+    }
+
+    .modal-content {
+        padding: 20px; /* Reduz o padding do conteúdo do modal */
+    }
+
+    .close {
+        font-size: 24px; /* Reduz o tamanho da fonte do botão de fechar */
+    }
+
+    footer {
+        padding: 20px; /* Reduz o padding do rodapé */
+    }
+
+    footer .icones img {
+        width: 25px; /* Reduz a largura dos ícones de redes sociais */
+        margin: 0 10px; /* Reduz o espaço horizontal entre os ícones */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        gap: 5px; /* Reduz o espaço entre os itens do menu */
+    }
+
+    .menu ul li a {
+        font-size: 14px; /* Reduz o tamanho da fonte dos links do menu */
+    }
+
+    .intro img {
+        width: 80px; /* Reduz o tamanho da imagem de introdução */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Ajusta o padding dos botões */
+    }
+
+    .projeto-thumb {
+        max-width: 90%; /* Ajusta o tamanho máximo da imagem do projeto para telas menores */
+    }
+}

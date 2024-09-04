@@ -1,0 +1,203 @@
+/* Estilos Globais */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total do elemento */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão da página */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    background-color: #f0f0f0; /* Cor de fundo clara para o corpo */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos do Cabeçalho */
+header {
+    display: flex; /* Usa Flexbox para organizar os itens */
+    justify-content: space-between; /* Espaça os itens para as extremidades */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 20px 40px; /* Espaçamento interno */
+    background: linear-gradient(to right, #52dbd6, #fd7900); /* Gradiente de verde-azulado para laranja */
+    color: white; /* Cor do texto no cabeçalho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do cabeçalho */
+}
+
+.menu ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Exibe itens em linha */
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+.menu ul li a {
+    color: #000; /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Destaca o texto */
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves para cor de fundo e texto */
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para Ícones de Contato */
+.nome-foto, .email-foto, .numero-foto, .sms-foto {
+    width: 30px; /* Tamanho padrão dos ícones */
+    margin: 0 10px; /* Espaçamento horizontal */
+    transition: transform 0.3s, filter 0.3s; /* Transições suaves para transformação e brilho */
+}
+
+.nome-foto:hover, .email-foto:hover, .numero-foto:hover, .sms-foto:hover {
+    transform: scale(1.2); /* Aumenta o tamanho dos ícones ao passar o mouse */
+    filter: brightness(1.2); /* Aumenta o brilho dos ícones ao passar o mouse */
+}
+
+/* Estilos da Seção Principal */
+main {
+    background-color: #f4f4f4; /* Cor de fundo clara para a seção principal */
+    padding: 60px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+main#contato {
+    max-width: 600px; /* Largura máxima do formulário de contato */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 40px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo branca para destacar o formulário */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra ao redor do formulário */
+}
+
+form {
+    display: flex; /* Usa Flexbox para o formulário */
+    flex-direction: column; /* Alinha os itens na vertical */
+    gap: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+form label {
+    font-weight: bold; /* Destaca o texto dos rótulos */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    color: #444; /* Cor do texto dos rótulos */
+}
+
+form input, form textarea {
+    padding: 15px; /* Espaçamento interno dos campos */
+    border-radius: 5px; /* Cantos arredondados dos campos */
+    border: 1px solid #ddd; /* Borda leve dos campos */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #f9f9f9; /* Cor de fundo dos campos */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves para borda e sombra */
+}
+
+form input:focus, form textarea:focus {
+    border-color: #52dbd6; /* Cor da borda ao focar */
+    box-shadow: 0 0 10px rgba(82, 219, 214, 0.5); /* Sombra ao redor do campo ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+form button {
+    padding: 15px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    background-color: #fd7900; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    font-weight: bold; /* Destaca o texto */
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves para cor de fundo e transformação */
+}
+
+form button:hover {
+    background-color: #ff9233; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: #333; /* Cor de fundo escura para o rodapé */
+    color: white; /* Cor do texto do rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 30px 0; /* Espaçamento interno */
+    margin-top: 40px; /* Espaçamento superior */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor do rodapé */
+}
+
+footer .icones img {
+    width: 30px; /* Tamanho dos ícones sociais */
+    margin: 0 15px; /* Espaçamento horizontal entre os ícones */
+    transition: transform 0.3s; /* Transição suave para transformação */
+}
+
+footer .icones img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho dos ícones sociais ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Alinha itens verticalmente em telas pequenas */
+        align-items: flex-start; /* Alinha itens à esquerda */
+    }
+
+    .menu ul {
+        flex-direction: column; /* Organiza itens do menu em coluna */
+        gap: 10px; /* Espaçamento entre os itens do menu */
+        margin-top: 10px; /* Espaçamento superior */
+    }
+
+    .menu ul li {
+        margin-left: 0; /* Remove margem à esquerda dos itens do menu */
+    }
+
+    .menu ul li a {
+        padding: 10px; /* Reduz o espaçamento interno dos links */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+
+    main {
+        padding: 40px 10px; /* Reduz o espaçamento interno */
+    }
+
+    main#contato {
+        padding: 30px; /* Ajusta o espaçamento interno */
+        max-width: 100%; /* Largura máxima do formulário de contato */
+    }
+
+    form input, form textarea {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    form button {
+        padding: 12px; /* Ajusta o espaçamento interno do botão */
+    }
+
+    footer {
+        padding: 20px 10px; /* Ajusta o espaçamento interno */
+    }
+
+    footer .icones img {
+        width: 25px; /* Reduz o tamanho dos ícones sociais */
+        margin: 0 10px; /* Ajusta o espaçamento horizontal entre os ícones */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        gap: 5px; /* Reduz o espaçamento entre itens do menu */
+    }
+
+    .menu ul li a {
+        font-size: 14px; /* Reduz o tamanho da fonte dos links */
+    }
+
+    form input, form textarea {
+        font-size: 12px; /* Reduz o tamanho da fonte dos campos */
+    }
+
+    form button {
+        padding: 10px; /* Reduz o espaçamento interno do botão */
+    }
+}
